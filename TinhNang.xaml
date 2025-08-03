@@ -1,0 +1,414 @@
+﻿<Window x:Class="QuanLyChanNuoi.TinhNang"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyChanNuoi"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="INSERT" Height="600" Width="1000">
+    <Grid>
+        <StackPanel x:Name="H" Visibility="Collapsed">
+            <TextBlock FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" Text="Thêm huyện" HorizontalAlignment="Center"/>
+            <Separator/>
+            <TextBlock Text="ID huyện:" FontFamily="Sans Serif Collection" FontSize="23" Margin="10 0 10 0"/>
+            <TextBox x:Name="aidh" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="2" Margin="10 0 10 0"/>
+            <TextBlock Text="Tên huyện:" FontFamily="Sans Serif Collection" FontSize="23" Margin="10 0 10 0"/>
+            <TextBox x:Name="ath" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="2" Margin="10 0 10 0"/>
+            <Button Content="Xác nhận" Click="ah2_Click" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+        </StackPanel>
+
+        <ScrollViewer x:Name="X" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm xã" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="HComboBox" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0">
+                </ComboBox>
+                <TextBlock Text="ID xã:" FontFamily="Sans Serif Collection" FontSize="23" Margin="10 0 10 0"/>
+                <TextBox x:Name="aidx" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="2" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên xã:" FontFamily="Sans Serif Collection" FontSize="23" Margin="10 0 10 0"/>
+                <TextBox x:Name="atx" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="2" Margin="10 0 10 0"/>
+                <Button Content="Xác nhận" Click="ax2_Click" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="CSSX" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm cơ sở sản xuất sản phẩm xử lý chất thải chăn nuôi" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="HCSSX" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="XCSSX" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="ID cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idcssx" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tcssx" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Địa chỉ cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dccssx" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="SĐT cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtcssx" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="ecssx" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="acssx2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="CSKN" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm cơ sở khảo nghiệm sản phẩm xử lý chất thải chăn nuôi" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hcskn" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xcskn" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="ID cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idcskn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tcskn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Địa chỉ cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dccskn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="SĐT cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtcskn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email cơ sở: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="ecskn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="acskn2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="ToChuc" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm tổ chức" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="htc" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xtc" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Cơ sở chăn nuôi: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="cscntc" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0">
+
+                </ComboBox>
+                <TextBlock Text="ID tổ chức: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idtc" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên tổ chức: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="ttc" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên người đại diện: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tndd" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Địa chỉ người đại diện: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dcndd" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="SĐT tổ chức: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdttc" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email tổ chức: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="etc" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="atc2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="CaNhan" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm cá nhân" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hcn" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xcn" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Cơ sở chăn nuôi: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="cscncn" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0">
+
+                </ComboBox>
+                <TextBlock Text="CCCD: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="cccdcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên cá nhân: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dccn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="SĐT: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="acn2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="dkcNuoi" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm điều kiện chăn nuôi" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID điều kiện chăn nuôi: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="iddkcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên điều kiện chăn nuôi: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tdkcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Ngày hiệu lực: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <DatePicker x:Name="nhldkcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Ngày hết hạn: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <DatePicker x:Name="nhhdkcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="adkcn2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="tochucChNhan" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm tổ chức chứng nhận" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="htccnhan" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xtccnhan" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="ID tổ chức chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idtccnhan" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên tổ chức chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="ttccnhan" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Địa chỉ tổ chức chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dctccnhan" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="SĐT tổ chức chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdttccnhan" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email tổ chức chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="etccnhan" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="atccnhan2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="giayChNhan" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm giấy chứng nhận" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID giấy chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idgcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên giấy chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox  x:Name="tgcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tổ chức chứng nhận" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <ComboBox x:Name="tcgcn" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0">
+
+                </ComboBox>
+                <TextBlock Text="Ngày chứng nhận: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <DatePicker  x:Name="ngcn" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBlock Text="Ngày hết hạn: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <DatePicker x:Name="nhhgcn" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <Button Click="agcn2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="hoCnuoiNhole" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm hộ chăn nuôi nhỏ lẻ " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID hộ chăn nuôi nhỏ lẻ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idhcnnl" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên hộ chăn nuôi nhỏ lẻ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="thcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên chủ hộ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tchcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="SĐT chủ hộ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdthcn" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hhcn" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xhcn" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25">
+
+                </ComboBox>
+                <TextBlock Text="Thống kê: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tkhcn" TextWrapping="Wrap" Height="250" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="ahcn2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="coSoCheBien" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm cơ sở chế biến " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID cơ sở chế biến: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idcscb" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên cơ sở chế biến: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tcscbien" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hcb" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xcbien" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dccbien" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Số điện thoại: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtcbien" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="emailcbien" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="acb2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="CSChanNuoi" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm cơ sở chăn nuôi" FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+
+                <TextBlock Text="ID cơ sở chăn nuôi: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idcNuoi" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+
+                <TextBlock Text="Tên cơ sở chăn nuôi: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tencNuoi" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+
+                <TextBlock Text="Điều kiện chăn nuôi" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="dkcNuoi_cb" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="huyencNuoi_cb" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xacNuoi_cb" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="diachicNuoi" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+
+                <TextBlock Text="Số điện thoại: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtcNuoi" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+
+                <TextBlock Text="Email: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="emailcNuoi" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+
+                <Button Click="xacNhan_cNuoi_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Dịch Bệnh -->
+        <ScrollViewer x:Name="dichBenh" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm dịch bệnh " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID dịch bệnh: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="iddb" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên Dịch Bệnh: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tdb" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Mô tả: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox Height="300" TextWrapping="Wrap" x:Name="mtdb" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="adb2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Vùng Dịch Bệnh -->
+        <ScrollViewer x:Name="vungDichBenh" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm vùng dịch bệnh " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID vùng dịch: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idvd" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên vùng dịch: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tvd" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hvd" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Xã" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xvd" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Dịch Bệnh" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="dbvd" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Ngày khởi phát" FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <DatePicker x:Name="nkpvd" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <Button Click="avd2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="chiCucThuY" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm chi cục thú y " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID chi cục thú y: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idccty" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên chi cục thú y: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tccty" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hccty" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Xã: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xccty" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dcccty" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Số điện thoại: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtccty" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="eccty" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="accty2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="daiLyThuoc" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm đại lý thuốc " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID đại lý: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="iddly" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên đại lý: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tdly" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hdly" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Xã: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xdly" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dcdly" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Số điện thoại: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtdly" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Email: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="edly" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="adl2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Khu Tạm Giữ -->
+        <ScrollViewer x:Name="khuTamGiu" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm khu tạm giữ " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID khu tạm giữ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idtgiu" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên khu tạm giữ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="ttgiu" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="htgiu" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Xã: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xtgiu" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dctgiu" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Số điện thoại: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdttgiu" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="atg_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- cơ sở giết mổ -->
+        <ScrollViewer x:Name="coSoGietMo" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="Thêm cơ sở giết mổ: " FontSize="30" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="ID cơ sở giết mổ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="idgm" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên cơ sở giết mổ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="tgm" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Huyện: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="hgm" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Xã: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <ComboBox x:Name="xgm" Margin="10 0 10 0" FontFamily="Sans Serif Collection" FontSize="25"/>
+                <TextBlock Text="Địa chỉ: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="dcgm" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <TextBlock Text="Số điện thoại: " FontSize="23" FontFamily="Sans Serif Collection" Margin="10 0 10 0"/>
+                <TextBox x:Name="sdtgm" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 0"/>
+                <Button Click="agm2_Click" Content="Xác nhận" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" Background="#89CFF0"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

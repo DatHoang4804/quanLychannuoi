@@ -1,0 +1,192 @@
+﻿<Window x:Class="QuanLyChanNuoi.TrangChu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Quản lý chăn nuôi" Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Panel trái -->
+        <StackPanel Grid.Column="0" Visibility="Visible" Background="#89CFF0">
+            <Button x:Name="btnTrangChu" FontSize="25" FontFamily="Sans Serif Collection" Background="#89CFF0" Content="🏠 Trang chủ" BorderThickness="5" Click="btnTrangChu_Click"/>
+            <Separator/>
+            <Button x:Name="btnTraCuu" FontSize="25" FontFamily="Sans Serif Collection" Background="#89CFF0" Content="🔎 Tra cứu" BorderThickness="5" Height="76" Click="btnTraCuu_Click"/>
+            <Separator/>
+            <Button FontSize="25" Click="btnCaNhan_Click" FontFamily="Sans Serif Collection" Background="#89CFF0" Content="👤 Tài khoản" BorderThickness="5"/>
+            <Separator/>
+            <Button FontSize="25" Click="btnDangXuat_Click" FontFamily="Sans Serif Collection" Background="#89CFF0" Content="⏻ Đăng xuất" BorderThickness="5"/>
+        </StackPanel>
+
+        <!-- Nội dung -->
+        <Grid Grid.Column="1">
+            <!-- Giao diện Trang chủ -->
+            <ScrollViewer x:Name="TrangChuPanel" Visibility="Visible" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Trang chủ hệ thống" FontSize="40" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center" Height="78.273"/>
+                    <Separator/>
+                    <TextBlock Text="Huyện, xã:" FontSize="25" FontFamily="Sans Serif Collection" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <Grid Height="78.27">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Click="ah1_Click" Content="Thêm huyện" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Content="Thêm xã" Click="ax1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                    </Grid>
+
+                    <TextBlock Text="Sản phẩm xử lý chất thải chăn nuôi:" FontSize="25" FontFamily="Sans Serif Collection" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <Grid Height="78.27">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Content="Cơ sở sản xuất" Click="acssx1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Content="Cơ sở khảo nghiệm" Click="acskn1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                    </Grid>
+
+                    <TextBlock Text="Cơ sở chăn nuôi, chế biến:" FontSize="25" FontFamily="Sans Serif Collection" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <Grid Height="254.81">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="78.27"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="78.27"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="78.27"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Grid.Row="0" Content="Tổ chức" Click="atc1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Grid.Row="0" Content="Cá nhân" Click="acn1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="5" Grid.Row="0" Content="Điều kiện chăn nuôi" Click="adkcn1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="1" Grid.Row="2" Content="Tổ chức chứng nhận" Click="atccn1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Grid.Row="2" Content="Giấy chứng nhận" Click="agcn1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="5" Grid.Row="2" Content="Hộ chăn nuôi nhỏ lẻ" Click="ahcnnl1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Grid.Row="4" Content="Cơ sở chăn nuôi" Click="acscn1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="1" Grid.Row="4" Content="Cơ sở chế biến" Click="acscb1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                    </Grid>
+
+                    <TextBlock Text="Dịch bệnh:" FontSize="25" FontFamily="Sans Serif Collection" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <Grid Height="78.27">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Content="Loại dịch bệnh" Click="aldb1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Content="Vùng dịch bệnh" Click="avdb1_Click"  FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                    </Grid>
+
+                    <TextBlock Text="Chi cục thú y, đại lý bán thuốc, cơ sở tạm giữ và giết mổ:" FontSize="25" FontFamily="Sans Serif Collection" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    <Grid Height="166.54">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="78.27"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="78.27"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.025*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Grid.Row="0" Content="Chi cục thú y" Click="accty1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="3" Grid.Row="0" Content="Đại lý bán thuốc thú y" Click="adlbt1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="5" Grid.Row="0" Content="Cơ sở tạm giữ" Click="acstg1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                        <Button Grid.Column="1" Grid.Row="2" Content="Cơ sở giết mổ" Click="acsgm1_Click" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5"/>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Giao diện Tra cứu -->
+            <ScrollViewer x:Name="TraCuuPanel" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock Text="Tra cứu thông tin" FontSize="40" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center" Height="78.273"/>
+                    <Separator/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="900"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox x:Name="tc" Width="auto" Grid.Column="0" FontSize="25" FontFamily="Sans Serif Collection" BorderThickness="5">
+                            <ComboBoxItem x:Name="tch">Huyện</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcx">Xã</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcsx">Cơ sở sản xuất sản phẩm xử lý chất thải</ComboBoxItem>
+                            <ComboBoxItem x:Name="tckn">Cơ sở khảo nghiệm sản phẩm xử lý chất thải</ComboBoxItem>
+                            <ComboBoxItem x:Name="tctc">Tổ chức</ComboBoxItem>
+                            <ComboBoxItem x:Name="tccn">Cá nhân</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcdk">Điều kiện chăn nuôi</ComboBoxItem>
+                            <ComboBoxItem x:Name="tctccn">Tổ chức chứng nhận</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcgcn">Giấy chứng nhận</ComboBoxItem>
+                            <ComboBoxItem x:Name="tchcn">Hộ chăn nuôi nhỏ lẻ</ComboBoxItem>
+                            <ComboBoxItem x:Name="tccscn">Cơ sở chăn nuôi</ComboBoxItem>
+                            <ComboBoxItem x:Name="tccb">Cơ sở chế biến</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcdb">Loại dịch bệnh</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcvdb">Vùng dịch bệnh</ComboBoxItem>
+                            <ComboBoxItem x:Name="tccty">Chi cục thú y</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcdl">Đại lý bán thuốc thú y</ComboBoxItem>
+                            <ComboBoxItem x:Name="tctg">Cơ sở tạm giữ</ComboBoxItem>
+                            <ComboBoxItem x:Name="tcgm">Cơ sở giết mổ</ComboBoxItem>
+                        </ComboBox>
+                        <Button Width="auto" Click="tc_Click" Grid.Column="2" Content="Tra cứu" FontFamily="Sans Serif Collection" FontSize="25" BorderThickness="5"/>
+                    </Grid>
+                    <DataGrid AutoGenerateColumns="True" RowEditEnding="kqtc_RowEditEnding" IsReadOnly="False" x:Name="kqtc" FontFamily="Sans Serif Collection" FontSize="20"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            <ScrollViewer x:Name="CaNhanPanel" Grid.Column="1" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock Text="Tài khoản" FontSize="40" FontFamily="Sans Serif Collection" FontWeight="Bold" HorizontalAlignment="Center" Height="78.273"/>
+                    <Separator Margin="0 0 0 10"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="185*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="👤" FontSize="110" VerticalAlignment="Top" HorizontalAlignment="Left" Height="133" Margin="-6,-4,0,0"/>
+                        <StackPanel Grid.ColumnSpan="2" Margin="150,0,0,0">
+                            <TextBlock x:Name="txtUserName" Text="Tên người dùng" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 10" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtUserRole" Text="Vai trò" FontFamily="Sans Serif Collection" FontSize="25" Margin="10 0 10 10"/>
+                        </StackPanel>
+                    </Grid>
+                    <Separator/>
+                    <Button Click="SuaTT_Click" Content="Chỉnh sửa thông tin cá nhân" FontFamily="Sans Serif Collection" FontSize="25" BorderThickness="5" Margin="10 0 10 10"/>
+                    <Button Click="LsDN_Click" Content="Lịch sử đăng nhập" FontFamily="Sans Serif Collection" FontSize="25" BorderThickness="5" Margin="10 0 10 10"/>
+                    <Button Click="tvND_Click" Content="Truy vấn và chỉnh sửa thông tin người dùng" FontFamily="Sans Serif Collection" FontSize="25" BorderThickness="5" Margin="10 0 10 10"/>
+                    <Button Content="Lịch sử tác động lên hệ thống" FontFamily="Sans Serif Collection" FontSize="25" BorderThickness="5" Margin="10 0 10 10"/>
+                    <Button Click="doiMK_Click" Content="Đổi mật khẩu" FontFamily="Sans Serif Collection" FontSize="25" BorderThickness="5" Margin="10 0 10 10"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

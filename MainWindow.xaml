@@ -1,0 +1,51 @@
+﻿<Window x:Class="QuanLyChanNuoi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyChanNuoi"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Quản lý chăn nuôi" Height="720" Width="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Border>
+            <Border.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Images/4.png"
+                    Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+        <StackPanel Grid.Column="1" Visibility="Visible" x:Name="DangNhapPanel">
+            <TextBlock Text="Đăng nhập hệ thống" FontFamily="Sans Serif Collection" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <Separator/>
+            <TextBlock Text="Tên tài khoản:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+            <TextBox x:Name="tkdn" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+            <TextBlock Text="Mật khẩu:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+            <PasswordBox x:Name="mkdn" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+            <Button x:Name="dn" Click="dn1_Click" Content="Đăng nhập" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#89CFF0"/>
+            <Button x:Name="dk1" Click="dk1_Click" Content="Nếu bạn chưa có tài khoản nhấn vào đây để đăng kí" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontFamily="Sans Serif Collection" FontStyle="Italic" Background="White" BorderThickness="0"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="1" x:Name="DangKyPanel" Visibility="Collapsed" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="Đăng ký tài khoản" FontFamily="Sans Serif Collection" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Separator/>
+                <TextBlock Text="Tên đầy đủ:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+                <TextBox x:Name="tdddk" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+                <TextBlock Text="Tên tài khoản:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+                <TextBox x:Name="tkdk" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+                <TextBlock Text="Email:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+                <TextBox x:Name="gdk" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+                <TextBlock Text="Mật khẩu:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+                <PasswordBox x:Name="mkdk1" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+                <TextBlock Text="Nhập lại mật khẩu:" FontFamily="Sans Serif Collection" FontSize="23" Margin="15" Height="43"/>
+                <PasswordBox x:Name="mkdk2" FontSize="25" BorderThickness="2" Margin="10 0 10 0"/>
+                <Button x:Name="dk2" Click="dk2_Click" Content="Đăng ký" Background="#89CFF0" Width="135" Margin="0 20 0 0" FontFamily="Sans Serif Collection" FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="dn2" Click="dn2_Click" Content="Đã có tài khoản? Nhấn vào đây để đăng nhập!" Margin="0 10 0 0" HorizontalAlignment="Center" FontSize="18" FontFamily="Sans Serif Collection" FontStyle="Italic" Background="White" BorderThickness="0"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
